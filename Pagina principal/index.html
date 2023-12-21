@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1 id="cima">Programador Web</h1>
+            <p>Bem-vindo ao meu portfólio</p>
+            <p class="menu-icon">&#9776;</p>
+            <nav class="menu-open">
+                <a href="#home">Home</a>
+                <a href="#about">Sobre Mim</a>
+                <a href="#skills">Habilidades</a>
+                <a href="#projects">Projetos</a>
+                <a href="#contact">Contato</a>
+            </nav>
+        </header>
+<script>
+    function adjustMenuVisibility() {
+        var menuOpen = document.querySelector('.menu-open');
+        var menuIcon = document.querySelector('.menu-icon');
+
+        if (window.innerWidth <= 680) {
+            menuOpen.style.display = (menuIcon.style.display === 'none') ? 'flex' : 'none';
+            menuIcon.style.display = 'block';
+        } else {
+            menuOpen.style.display = 'flex';
+            menuIcon.style.display = 'none';
+        }
+    }
+    function toggleMenu() {
+        var menuOpen = document.querySelector('.menu-open');
+        if (window.innerWidth <= 680) {
+            menuOpen.style.display = (menuOpen.style.display === 'flex') ? 'none' : 'flex';
+        } else {
+            menuOpen.style.display = 'none';
+        }
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+        adjustMenuVisibility();
+        window.addEventListener('resize', adjustMenuVisibility);
+
+        document.querySelector('.menu-icon').addEventListener('click', toggleMenu);
+        document.querySelectorAll('.menu-open a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                document.querySelector('.menu-open').style.display = 'none';
+            });
+        });
+    });
+</script>
+        <section id="about">
+            <h2>Sobre Mim</h2>
+            <p>Sou um jovem programador, cheio de entusiasmo e determinação, que está dando os primeiros passos na vastidão do desenvolvimento web, mergulhando nos fundamentos essenciais de <strong>HTML5</strong>, <strong>CSS3</strong> e <strong>JavaScript</strong>.</p>
+        </section>
+        <section id="skills">
+            <h2>Habilidades</h2>
+            <p>Lista de tecnologias e linguagens que domino.</p>
+                <div class="portfolio">
+                    <img src="imagens/html.jpeg" alt="HTML5">
+                    <img src="imagens/css.jpeg" alt="CSS3">
+                    <img src="imagens/javass.jpeg" alt="JavaScript">
+                </div>
+        </section>
+        <section id="projects">
+            <h2>Projetos</h2>
+            <p>.</p>
+            <div class="project-box">
+                <img src="imagens/Projeto1.jpeg" alt="Projeto 1" class="project-image">
+                <div class="project-content">
+                    <h3>Projeto 1</h3>
+                    <p>Meu primeiro projeto, quando estava começando a programar. Fiquei muito feliz com o resultado!</p>
+                    <a href="https://luizfelipe1206.github.io/projeto-android/" target="_blank">Ver mais</a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="imagens/projeto2.jpeg" alt="Projeto 2">
+                <div class="project-content">
+                    <h3>Projeto 2</h3>
+                    <p>Meu segundo projeto, já mais familiarizado com <strong>HTML-5</strong> e <strong>CSS3</strong> e responsividade.</p>
+                    <a href="https://luizfelipe1206.github.io/Projeto-cordel/" target="_blank">Ver mais</a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="imagens/projeto3.jpeg" alt="Projeto 3">
+                <div class="project-content">
+                    <h3>Projeto 3</h3>
+                    <p>Esse projeto me deu um trabalho por causa das imagens, mas foi muito gratificante quando acabei,apesar de não estar perfeito.</p>
+                    <a href="https://luizfelipe1206.github.io/Projeto-Social/" target="_blank">Ver mais</a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="imagens/projeto4.jpeg" alt="Projeto 4">
+                <div class="project-content">
+                    <h3>Projeto 4</h3>
+                    <p>O maior e mais bem feito projeto que fiz até agora, totalmente feito com <strong>HTML-5</strong> e com <strong>CSS3</strong> para melhorar só falta acrescentar <strong>JavaScript</strong> no código.
+                    </p>
+                    <a href="https://luizfelipe1206.github.io/Projeto-Tela-de-Login/" target="_blank">Ver mais</a>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contatos</h2>
+                <div class="contact-section">
+                <div class="contact-info">
+                    <a href="https://www.instagram.com/luizvalle_/" target="_blank">
+                    <img src="imagens/instagram.png" alt="Instagram" class="icon"> Instagram</a>
+                    <a href="https://github.com/luizfelipe1206" target="_blank">
+                    <img src="imagens/github.png" alt="GitHub" class="icon"> GitHub</a>
+                    <a href="https://www.linkedin.com/in/luiz-felipe-9b53032a5/" target="_blank">
+                    <img src="imagens/linkedin.png" alt="LinkedIn" class="icon"> LinkedIn</a>
+                </div>
+    </main>
+        </section>
+        <footer>
+            <p>&copy; 2023 Portfólio de Programador Web.</p>
+        </footer>
+        
+        </body>
+    
+
+</html>
+

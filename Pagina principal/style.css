@@ -1,0 +1,327 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+header {
+    background: linear-gradient(45deg, #30434d, #53687e);
+    color: #fff;
+    padding: 30px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #333;
+    text-align: center;
+    position: relative;
+}
+header > h1{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+header > p {
+    padding: 10px;
+    text-align: center;
+}
+header a:hover {
+    color: #f87f2f;
+    transition: 0.8s;
+}
+nav {
+    display: none;
+    justify-content: left;
+    margin-top: 5px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out;
+    text-decoration: none; 
+    padding: 10px;
+}
+
+/* Estilos para o ícone de hamburguer */
+.p-icon {
+    display: none;
+    position:relative;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Estilos para o menu quando está aberto */
+.menu-open {
+    display: none;
+    flex-direction: row;
+    text-align: left;
+    background: linear-gradient(45deg, #30434d, #53687e);
+    position:relative;
+    top: 70px;
+    right: 0;
+    left: 0px;
+    padding: 10px;
+    z-index: 1;
+    
+}
+
+.menu-open a {
+    margin: 10px 0;
+}
+section {
+    padding: 50px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #2b2b2b;
+    /* Cinza mais escuro para fundo de seções */
+}
+
+section h2 {
+    color: #f87f2f;
+    /* Laranja para títulos de seção */
+    border-bottom: 2px solid #f87f2f;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #ddd;
+    /* Cinza mais claro para texto de seção */
+}
+
+section#projects > p{
+color:rgb(50, 50, 50);
+}
+div.project-content > h3{
+    color: #ddd;
+}
+strong {
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: bolder;
+}
+section#skills p{
+    text-align: center;
+}
+.portfolio {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.portfolio img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio img:hover {
+    transform: scale(1.1);}
+section#projects {
+    background: linear-gradient(rgba(50, 50, 50, 0.7), rgba(50, 50, 50, 0.9));
+    /* Degradê de cinza claro para fundo de projetos */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    
+}
+
+.project-box {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.project-box:hover {
+    transform: scale(1.05);
+}
+
+.project-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.project-content {
+    padding: 20px;
+}
+
+.project-content h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    color: #f1eded;
+    margin-bottom: 20px;
+}
+
+.project-content a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #f87f2f, #ffae42);
+    /* Degradê laranja para botões */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.project-content a:hover {
+    background: linear-gradient(45deg, #e04d00, #f57c29);
+    /* Degradê laranja mais escuro ao passar o mouse */
+}
+section#contact{
+    text-align: center;
+}
+.contact-info {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;   
+}
+
+.contact-info a {
+    color: #f8f8f8;
+    text-decoration: none;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.contact-info .icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.contact-info a:hover {
+    color: #f87f2f;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    right: 10px;
+    left: 0;
+}
+
+footer p {
+    margin: 0;
+}
+@media screen and (max-width: 680px) {
+    header {
+        padding: 15px 0;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    section p {
+        font-size: 1.1em;
+        margin-bottom: 15px;
+    }
+
+    .portfolio img {
+        width: 60px;
+        height: 60px;
+        margin: 5px;
+    }
+
+    .project-box {
+        margin-bottom: 10px;
+    }
+
+    .project-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+
+    .project-content p {
+        font-size: 1em;
+        margin-bottom: 12px;
+    }
+
+    .project-content a {
+        padding: 8px 14px;
+        font-size: 0.9rem;
+    }
+
+    .contact-info a {
+        font-size: 14px;
+        margin: 8px;
+    }
+
+    .contact-info .icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .p-icon {
+        display: block;
+    }
+
+.menu-open {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #30434d, #53687e);
+    position: relative;
+    top: 5px;
+    right: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 1;
+}
+
+.menu-open a {
+    margin: 0 8px;
+    
+}
+}
